@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sahil Timori — Amazon Affiliate Partner. Handpicked products, honest reviews, buying guides and Amazon deals.">
+  <title>Sahil Timori | Amazon Affiliate Partner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">Independent product recommendations • As an Amazon Associate, I earn from qualifying purchases.</div>
+
+  <header>
+    <div class="nav">
+      <a class="brand" href="#home"><span>Sahil</span> Timori <small>Amazon Affiliate Partner</small></a>
+      <div class="search"><input id="searchInput" type="search" placeholder="Search products, categories..."><button onclick="searchProducts()">⌕</button></div>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <nav id="navLinks">
+        <a href="#home">Home</a><a href="#deals">Best Deals</a><a href="#categories">Categories</a>
+        <a href="#guides">Blog</a><a href="#about">About Me</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">WELCOME TO MY PICKS</div>
+        <h1>Shop smarter.<br>Choose <span>better.</span></h1>
+        <p>I research products, compare options and highlight the ones worth your money — so you can shop with confidence.</p>
+        <div class="buttons"><a class="btn primary" href="#deals">Shop Best Deals →</a><a class="btn secondary" href="#about">About Me</a></div>
+        <div class="trust-row">
+          <div><b>✓</b><span><strong>Honest Picks</strong><small>No hype, just useful recommendations.</small></span></div>
+          <div><b>★</b><span><strong>Best Value</strong><small>Deals selected for price & quality.</small></span></div>
+          <div><b>↗</b><span><strong>Amazon Secure</strong><small>Purchase through Amazon.</small></span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="glow"></div><div class="device d1">🎧</div><div class="device d2">📱</div><div class="device d3">⌚</div>
+        <div class="amazon-badge">a</div>
+      </div>
+    </section>
+
+    <section class="categories" id="categories">
+      <button onclick="filterCategory('Electronics')">🎧<span>Electronics</span></button>
+      <button onclick="filterCategory('Mobiles')">📱<span>Mobiles</span></button>
+      <button onclick="filterCategory('Computers')">💻<span>Computers</span></button>
+      <button onclick="filterCategory('Home')">☕<span>Home & Kitchen</span></button>
+      <button onclick="filterCategory('Gaming')">🎮<span>Gaming</span></button>
+      <button onclick="filterCategory('Fitness')">🏃<span>Fitness</span></button>
+      <button onclick="filterCategory('Fashion')">👟<span>Fashion</span></button>
+      <button onclick="filterCategory('Beauty')">✨<span>Beauty</span></button>
+    </section>
+
+    <section class="section" id="deals">
+      <div class="section-head"><div><div class="eyebrow">HANDPICKED FOR YOU</div><h2>Top Picks & Best Deals</h2></div><button class="text-btn" onclick="showAll()">View All →</button></div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="about-card" id="about">
+      <div class="avatar">ST</div>
+      <div class="about-copy"><div class="eyebrow">WHY TRUST ME?</div><h2>I Review. You Choose Wisely.</h2><p>Hi, I'm Sahil Timori, an Amazon Affiliate Partner. I research products, compare features and surface useful buying options to help you make informed decisions.</p></div>
+      <div class="stats"><div><b>100%</b><span>Research-led</span></div><div><b>✓</b><span>Updated Picks</span></div><div><b>₹</b><span>Value Focused</span></div><div><b>24/7</b><span>Shopping Guides</span></div></div>
+    </section>
+
+    <section class="section" id="guides">
+      <div class="section-head"><div><div class="eyebrow">LATEST GUIDES & REVIEWS</div><h2>Read. Learn. Shop Smart.</h2></div><button class="text-btn">View All Articles →</button></div>
+      <div class="articles">
+        <article><div class="article-img">🎧</div><small>ELECTRONICS</small><h3>How to Choose the Best Noise-Cancelling Headphones</h3><p>What to check before buying: comfort, ANC, battery and codecs.</p></article>
+        <article><div class="article-img">📱</div><small>SMARTPHONES</small><h3>What Makes a Smartphone Worth Buying?</h3><p>A practical checklist for comparing phones at different budgets.</p></article>
+        <article><div class="article-img">☕</div><small>HOME & KITCHEN</small><h3>Top Things to Check Before Buying a Coffee Maker</h3><p>Capacity, pressure, cleaning and long-term value explained.</p></article>
+        <article><div class="article-img">📦</div><small>TIPS & GUIDES</small><h3>How to Find Better Deals on Amazon</h3><p>Simple ways to compare prices and avoid impulse purchases.</p></article>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div><span class="mail">✉</span><div><h2>Get Deals & Updates</h2><p>Useful product picks, guides and offers — straight to your inbox.</p></div></div>
+      <form onsubmit="subscribe(event)"><input id="email" type="email" required placeholder="Enter your email address"><button>Subscribe</button></form>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-grid">
+      <div><a class="brand" href="#home"><span>Sahil</span> Timori <small>Amazon Affiliate Partner</small></a><p>Your source for practical product reviews, buying guides and shopping recommendations.</p><div class="social">◎　▶　f　in</div></div>
+      <div><h4>QUICK LINKS</h4><a href="#home">Home</a><a href="#deals">Best Deals</a><a href="#categories">Categories</a><a href="#guides">Blog</a></div>
+      <div><h4>POPULAR</h4><a href="#deals">Electronics</a><a href="#deals">Mobiles</a><a href="#deals">Home & Kitchen</a><a href="#deals">Gaming</a></div>
+      <div><h4>LEGAL</h4><a href="#">Privacy Policy</a><a href="#">Affiliate Disclosure</a><a href="#">Terms & Conditions</a><p class="disclosure">As an Amazon Associate, I earn from qualifying purchases.</p></div>
+    </div>
+    <div class="copyright">© 2026 Sahil Timori — Amazon Affiliate Partner. All rights reserved.</div>
+  </footer>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
